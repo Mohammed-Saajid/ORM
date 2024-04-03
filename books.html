@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<center>
+<body>
+     <h1>Book List</h1>
+    <table border="1">
+
+<tr>
+<th>Book. ID</th>
+<th>Book Name</th>
+<th>Book Department</th>
+<th>Book Price</th>
+<td>EDIT</td>
+<td>DELETE</td>
+</tr>
+
+{% for employee in employees %}
+<tr>
+<td>{{employee.empid}}</td>
+<td>{{employee.empname}}</td>
+<td>{{employee.dept}}</td>
+<td>{{employee.salary}}</td>
+<td><a href="edit/{{employee.id}}"><i class="bi bi-pencil"></i></td></a>
+<td><a href="delete/{{employee.id}}"><i class="bi bi-trash-fill"></i></td></a>
+</tr>
+{% endfor %}
+</table>
+</center>
+</body>
+</html>
